@@ -99,7 +99,19 @@ def load_data(city, month, day):
 
 
 def time_stats(df, city, month, day):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travel.
+
+    Args:
+        df - Pandas DataFrame containing city data (filtered by month and day)
+        (str) city - name of the user-selected city to analyze
+        (str) month - name of the user-selected month to filter by, or "all" to apply no month filter
+        (str) day - name of the user-selected day of week to filter by, or "all" to apply no day filter
+    Returns:
+        First value: (str) Confirmation of chosen city.
+        Second value: (str) Most popular month - or confirmation of chosen month.
+        Third value: (str) Most popular day of week - or confirmation of chosen day.
+        Fourth value: (str) Most popular hour in which travel began.
+    """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -130,7 +142,16 @@ def time_stats(df, city, month, day):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """Displays statistics on the most popular stations and trip.
+
+    Args:
+        df - Pandas DataFrame containing city data (filtered by month and day).
+
+    Returns:
+        First value: (str) Most common start station.
+        Second value: (str) Most common end station.
+        Third value: (str) Most common combination of start and end.
+    """
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
@@ -153,7 +174,15 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """Displays statistics on the total and average trip duration.
+
+    Args:
+        df - Pandas DataFrame containing city data (filtered by month and day).
+
+    Returns:
+        First value: (str) The total duration of travel time.
+        Second value: (str) The average travel time.
+    """
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -172,7 +201,16 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+
+    Args:
+        df - Pandas DataFrame containing city data (filtered by month and day).
+
+    Returns:
+        First value: (str) Count of total users.
+        Second value: (str) User counts divided by gender (if data available).
+        Third value: (str) The oldest, most recent and most common birth years of users (if data available).
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
