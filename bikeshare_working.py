@@ -201,7 +201,16 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+
+    Args:
+        df - Pandas DataFrame containing city data (filtered by month and day).
+
+    Returns:
+        First value: (str) Count of total users.
+        Second value: (str) User counts divided by gender (if data available).
+        Third value: (str) The oldest, most recent and most common birth years of users (if data available).
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
