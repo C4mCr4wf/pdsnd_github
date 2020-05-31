@@ -99,7 +99,19 @@ def load_data(city, month, day):
 
 
 def time_stats(df, city, month, day):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travel.
+
+    Args:
+        df - Pandas DataFrame containing city data filtered by month and day
+        (str) city - name of the user-selected city to analyze
+        (str) month - name of the user-selected month to filter by, or "all" to apply no month filter
+        (str) day - name of the user-selected day of week to filter by, or "all" to apply no day filter
+    Returns:
+        First value: (str) Confirmation of chosen city.
+        Second value: (str) Most popular month - or confirmation of chosen month.
+        Third value: (str) Most popular day of week - or confirmation of chosen day.
+        Fourth value: (str) Most popular hour in which travel began.
+    """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
