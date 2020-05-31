@@ -102,7 +102,7 @@ def time_stats(df, city, month, day):
     """Displays statistics on the most frequent times of travel.
 
     Args:
-        df - Pandas DataFrame containing city data filtered by month and day
+        df - Pandas DataFrame containing city data (filtered by month and day)
         (str) city - name of the user-selected city to analyze
         (str) month - name of the user-selected month to filter by, or "all" to apply no month filter
         (str) day - name of the user-selected day of week to filter by, or "all" to apply no day filter
@@ -142,7 +142,16 @@ def time_stats(df, city, month, day):
 
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
+    """Displays statistics on the most popular stations and trip.
+
+    Args:
+        df - Pandas DataFrame containing city data (filtered by month and day).
+
+    Returns:
+        First value: (str) Most common start station.
+        Second value: (str) Most common end station.
+        Third value: (str) Most common combination of start and end.
+    """
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
