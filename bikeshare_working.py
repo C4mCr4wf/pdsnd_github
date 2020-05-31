@@ -37,7 +37,7 @@ def get_filters():
     while True:
         city = input("\nTo get started, please select the city data you would like to expore. \n (please type 'chicago', 'new york city', or 'washington') : ").lower()
         if city not in CITY_DATA:
-            print("\nSorry. That is not a valid city option. Please try again.")
+            print("\nSorry. That is not a valid city selection. Please try again.")
             continue
         else:
             print("\nExcellent!\n")
